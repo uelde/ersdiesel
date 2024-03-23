@@ -1,0 +1,241 @@
+* {
+    margin-right: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ESTILO GERAL */
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+/* Estilo do corpo do header */
+body {
+    background-image: url(image/ford\ red.png);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    min-height: 100vh;
+    background-size: cover;
+}
+
+/* Estilo do header */
+
+header {
+    border-bottom: 1px solid #FFF;
+    padding-bottom: 10px;
+}
+
+.header-logo img {
+    margin-top: 05px;
+    width: 13rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-container nav ul {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.header-container nav ul li {
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+}
+
+.header-container nav ul li a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+.header-container .menu-desktop .list-menu li a::after {
+    content: "";
+    width: 0%;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.header-container .menu-desktop .list-menu li a:hover::after {
+    width: 97%;
+}
+
+.header-container button.btn-contato {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+    border-radius: 30px;
+    background-color: #ff0000;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.header-container button.btn-contato a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    transform: .2s;
+}
+
+.header-container button.btn-contato:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 8px #ff0000e7;
+}
+
+/* ESTILO DO MENU MOBILE */
+.btn-open-menu i {
+    color: #ff0000;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.menu-mobile.open-menu {
+    width: 70%;
+}
+
+.menu-mobile {
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.open-menu {
+    width: 70%;
+}
+
+@media screen and (min-width:1022px) {
+    .btn-open-menu {
+        display: none;
+    }
+}
+
+.menu-mobile.open-menu ~ .overlay-menu {
+    display: block;
+}
+
+
+.menu-mobile .btn-close i {
+    color: #ff0000;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menu-mobile .btn-close {
+    padding: 20px 5%;
+}
+
+.menu-mobile nav ul {
+    text-align: center;
+    display: block;
+}
+
+.menu-mobile nav ul li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+    transition: .2s;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: #ff0000;
+    font-weight: 600;
+}
+
+.overlay-menu {
+    background-color: #000000df;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+    display: none;
+}
+
+/* SEÇÃO HONE */
+.home-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh;
+}
+
+.home-information span{
+    color: #ff0000;
+}
+
+.home-title {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.home-text {
+    text-align: justify;
+    margin-top: -1.4rem;
+    color: #fff;
+}
+
+.home .home-information span.title-home {
+    font-size: 5rem;
+    color: #ff0000;
+}
+
+.home p {
+    font-size: 1.75rem;
+    font-weight: 300;
+}
+
+.hidden {
+    opacity: 0;  
+    transform: scale(0);
+}
+
+.show {
+    opacity: 1;
+    transform: scale(1);
+    transition: 1.3s;
+}
+
+@keyframes homeAnimation {
+    from {
+        transform: translateX();
+    }
+}
+/* FIM DA SEÇÃO HOME */
+
+@media screen and (max-width: 1023px){
+    /* CABEÇALHO - MENU */
+    .menu-desktop,
+    .btn-contato {
+        display: none;
+    }
+}

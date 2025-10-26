@@ -1,54 +1,59 @@
-* {
-    margin-right: 0;
+ * {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
+
 /* ESTILO GERAL */
 .interface {
     max-width: 1280px;
     margin: 0 auto;
+    position: relative; /* Para garantir que a interface fique acima do overlay do header */
+    z-index: 10; /* Garante que o conteúdo da interface no header esteja acima do overlay */
 }
 
 
-/* Estilo do corpo do header */
-body {
-    background-image: url(image/ford\ red.png);
-    background-repeat: no-repeat;
-    background-position: 100%;
-    min-height: 100vh;
-    background-size: cover;
+/* Separador de Seções com Sombra */
+.section-separator {
+    border-bottom: 2px solid #e0e0e0; /* Linha de 2px, cinza claro */
+    box-shadow: 0 4px 6px -6px rgba(0, 0, 0, 0.2); /* Sombra sutil para dar profundidade */
 }
-
 /* Estilo do header */
-
 header {
-    border-bottom: 1px solid #FFF;
-    padding-bottom: 10px;
+    padding: 0 4%; /* Remove o padding vertical para que a home possa preencher o espaço */
+    border-bottom: none; /* Remover a borda inferior para efeito transparente */
+    background-color: transparent; /* Fundo transparente */
+    position: absolute; /* Torna o header flutuante sobre a home */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Garante que o header fique acima de tudo */
+    min-height: auto; /* Remove o min-height fixo se quiser que o conteúdo defina */
 }
 
 .header-logo img {
-    margin-top: 05px;
-    width: 13rem;
+    margin-top: 0px; /* Remover margem superior */
+    width: 8rem;    /* Reduzir o width do logo */
+    height: auto;   /* Manter altura automática */
 }
 
 .header-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 15px 0; /* Adicionar padding aqui para o espaçamento interno do header */
 }
 
 .header-container nav ul {
     display: flex;
     align-items: center;
-    gap: 5rem;
+    gap: 3rem; /* Espaçamento entre os itens do menu */
 }
 
 .header-container nav ul li {
-    color: #fff;
-    text-decoration: none;
-    list-style: none;
+    list-style: none; /* Remover marcadores de lista */
 }
 
 .header-container nav ul li a {
@@ -57,15 +62,16 @@ header {
     text-transform: uppercase;
     letter-spacing: .2rem;
     text-decoration: none;
-    color: #fff;
+    color: #fff; /* Texto do menu branco para contraste */
     position: relative;
 }
 
+/* Efeito de sublinhado no hover (mantido e ajustado para branco) */
 .header-container .menu-desktop .list-menu li a::after {
     content: "";
     width: 0%;
     height: 4px;
-    background-color: #fff;
+    background-color: #fff; /* Alterado para branco para visibilidade no fundo escuro */
     position: absolute;
     bottom: 0;
     left: 0;
@@ -80,16 +86,16 @@ header {
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
-    border: 0;
+    border: 2px solid #ff0000; /* Borda para destaque */
     border-radius: 30px;
-    background-color: #ff0000;
+    background-color: transparent; /* Fundo transparente */
     cursor: pointer;
     transition: .2s;
 }
 
 .header-container button.btn-contato a {
     text-decoration: none;
-    color: #fff;
+    color: #fff; /* Texto branco */
     text-transform: uppercase;
     display: inline-block;
     transform: .2s;
@@ -97,22 +103,19 @@ header {
 
 .header-container button.btn-contato:hover {
     transform: scale(1.05);
+    background-color: #ff0000; /* Fundo vermelho no hover */
     box-shadow: 0px 0px 8px #ff0000e7;
 }
 
 /* ESTILO DO MENU MOBILE */
 .btn-open-menu i {
-    color: #ff0000;
+    color: #fff; /* Ícone do menu mobile branco */
     font-size: 40px;
     cursor: pointer;
 }
 
-.menu-mobile.open-menu {
-    width: 70%;
-}
-
 .menu-mobile {
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo um pouco transparente para o menu mobile */
     height: 100vh;
     position: fixed;
     top: 0;
@@ -127,6 +130,157 @@ header {
     width: 70%;
 }
 
+/* Estilos para a nova seção de fatos */
+.facts {
+    margin-top: 80px;
+    background-color: #1a4c75;
+    color: #fff;
+    padding: 80px 4%;
+    text-align: center;
+}
+
+.facts-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.fact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 300px;
+}
+
+.fact-icon {
+    font-size: 3rem;
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+.fact-item h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+
+}
+
+.fact-item p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.contact {
+    padding: 80px 4%;
+    background-color: #f9f9f9;
+}
+
+/* -------------------- ESTILOS DA SEÇÃO DE CONTATO -------------------- */
+#contact {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.contact .flex {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.contact-info {
+    display: block;
+    align-items: center;
+    min-width: 300px;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    font-size: 20px;
+    color: #FF0000;
+    margin-right: 10px;
+}
+
+.contact-form {
+    flex: 2;
+    min-width: 300px;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form .input-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #555;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form .btn-submit {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #FF0000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form .btn-submit:hover {
+    background-color: #CC0000;
+    transform: translateY(-2px);
+}
+
+.tittle .hidden {
+    display: flex;
+    justify-content: center;
+}
+.hidden{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 @media screen and (min-width:1022px) {
     .btn-open-menu {
         display: none;
@@ -139,7 +293,7 @@ header {
 
 
 .menu-mobile .btn-close i {
-    color: #ff0000;
+    color: #ff0000; /* Cor do X no menu mobile */
     font-size: 30px;
     cursor: pointer;
 }
@@ -154,7 +308,7 @@ header {
 }
 
 .menu-mobile nav ul li a {
-    color: #fff;
+    color: #fff; /* Cor do texto no menu mobile */
     font-size: 20px;
     font-weight: 300;
     padding: 20px 8%;
@@ -178,48 +332,325 @@ header {
     display: none;
 }
 
-/* SEÇÃO HONE */
+/* SEÇÃO HOME */
+.home {
+    height: 100vh;
+    background-image: url('./image/Banner\ do\ Site\ v4.png.jpg'); 
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+    position: relative; 
+    
+}
+/* Overlay escuro sobre a imagem de background para legibilidade do texto */
+/* Overlay escuro sobre a imagem de background para legibilidade do texto */
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Modificado para um gradiente linear */
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 0) 100%);
+    /*
+        Explicação do gradiente:
+        - to bottom right: Define a direção do gradiente (do topo-esquerda para o rodapé-direita).
+        - rgba(0, 0, 0, 0.8) 0%: Começa com preto quase opaco (80% de opacidade) no início (0%).
+        - rgba(0, 0, 0, 0) 70%: Transiciona para preto totalmente transparente (0% de opacidade) até os 70% do gradiente.
+          A imagem começará a aparecer mais nítida após 70%.
+    */
+    z-index: 1; /* Fica acima da imagem de background, mas abaixo do texto e logo */
+}
+
+.home > .interface {
+    height: 100%; /* Faz com que o .interface ocupe 100% da altura da .home */
+    display: flex; /* Transforma o .interface em um container flex */
+    flex-direction: column; /* Organiza os itens (home-content-container) em coluna */
+    justify-content: flex-end; /* Centraliza o conteúdo verticalmente dentro do .interface */
+    align-items: flex-start; /* ALINHA OS ITENS À ESQUERDA (NO INÍCIO DO EIXO TRANSVERSAL) */
+    padding: 0 4%; /* Adiciona o padding horizontal aqui para o conteúdo */
+    /* O margin: 0 auto; do .interface global ainda se aplica, mas o align-items: flex-start
+       aqui no .home > .interface garante que o conteúdo dentro dele vá para a esquerda. */
+    padding-bottom: 40px;
+}
+
+.home-content-container {
+    max-width: 600px; /* Limite a largura do bloco de texto conforme o exemplo */
+    text-align: left; /* Garante que o texto dentro deste container esteja alinhado à esquerda */
+    position: relative; /* Garante que fique acima do overlay */
+    z-index: 2; /* Fica acima do overlay */
+    color: #fff; /* Texto branco para contraste */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para legibilidade */
+}
+
+
+
+.home-content-container h1 {
+    margin-top: 0; /* Remover margem superior para alinhamento */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.home-content-container p {
+    font-size: 1.5rem; /* Ajuste o tamanho da fonte */
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 30px; /* Espaço abaixo do parágrafo */
+}
+
+
+/* Estilo do conteúdo da home */
+.home-information,
+.home-text,
+.btn-primary-home {
+    position: relative; /* Garante que fiquem acima do overlay */
+    z-index: 2; /* Fica acima do overlay */
+    color: #fff; /* Texto branco para contraste */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para legibilidade */
+}
+
+.home-information h1 {
+    margin-top: 0; /* Remover margem superior para centralização */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
 .home-information {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10vh;
+    align-items: flex-start; /* Alinha o h1 dentro de home-information à esquerda */
+    padding: 0; /* Remover padding, se estiver presente e causando desvios */
 }
 
-.home-information span{
-    color: #ff0000;
-}
 
-.home-information {
-    font-size: 16px;
-}
 
 .home-title {
-    text-align: center;
-    font-size: 4em;
-    font-weight: 600;
+    font-size: 3.5em;
+    font-weight: 700;
     color: #fff;
+    text-align: left; /* ALINHAMENTO EXPLÍCITO DO TÍTULO À ESQUERDA */
+    margin-top: 0;
+    margin-bottom: 20px;
 }
+
+.home-title span {
+    color: #ff0000; /* Destaque para o span */
+}
+
+.home-content-container > div > .home-text { /* Mais específico para garantir */
+    font-size: 1.5rem;
+    font-weight: 300;
+    max-width: 100%; /* Garante que o texto se ajuste à largura do home-content-container */
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: left; /* ALINHAMENTO EXPLÍCITO DO TEXTO À ESQUERDA */
+}
+
 
 .home-text {
-    text-align: justify;
-    margin-top: -1.4rem;
+    font-size: 1.5rem; /* Ajuste o tamanho da fonte */
+    font-weight: 1000;
+    max-width: 800px; /* Limitar largura do texto para melhor leitura */
+    line-height: 1.6;
+    margin-bottom: 30px; /* Espaço abaixo do parágrafo */
+}
+
+/* Novo botão na Home */
+.btn-primary-home {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s ease;
+    position: relative; /* Garante que fique acima do overlay */
+    z-index: 2; /* Fica acima do overlay */
+    align-self: flex-start; /* Alinha o botão à esquerda dentro do home-content-container */
+}
+
+.btn-primary-home a {
+    text-decoration: none;
+    color: #fff; /* Texto branco */
+    text-transform: uppercase;
+}
+
+.btn-primary-home:hover {
+    background-color: #ff0000; /* Fundo vermelho no hover */
+    border-color: #ff0000; /* Borda vermelha no hover */
+    transform: translateY(-5px); /* Leve elevação */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* FIM DA SEÇÃO HOME */
+
+
+/* INICIO DA SEÇÃO SOBRE */
+.about {
+    padding: 80px 4%;
+    background-color: #f5f5f5; /* Mantenha um fundo sólido como base, caso a imagem não carregue ou para transparência */
+    text-align: center;
+    position: relative; /* ESSENCIAL: Permite posicionar o ::before relativo a esta seção */
+    overflow: hidden; /* Garante que o pseudo-elemento não vaze para fora da seção */
+    /* REMOVER as propriedades background-image, background-size, background-position, background-repeat, e opacity daqui! */
+}
+
+.about::before {
+    content: ''; /* Essencial para pseudo-elementos */
+    position: absolute; /* Posição absoluta dentro do .about */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./image/bg-sobre.jpg'); /* ATENÇÃO: Substitua pelo CAMINHO REAL da sua imagem */
+    background-size: cover; /* A imagem cobre toda a área */
+    background-position: center center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    opacity: 0.09; /* Ajuste este valor para controlar a intensidade da imagem (ex: 0.05 para mais fraco, 0.15 para um pouco mais visível) */
+    z-index: 0; /* Garante que a imagem fique POR TRÁS do conteúdo (texto, título) */
+}
+
+.about .interface {
+    position: relative;
+    z-index: 1;
+    display: flex; /* O interface agora também será um flex container */
+    flex-direction: column; /* Padrão para imagem e texto lado a lado */
+    align-items: center;
+    gap: 30px;
+}
+
+.about-img {
+    flex: 1; /* Permite que a imagem ocupe o espaço disponível */
+    max-width: 400px; /* Largura máxima para a imagem */
+    text-align: center; /* Centraliza a imagem se ela for menor que o max-width */
+}
+
+.about-img img {
+    max-width: 100%; /* Garante que a imagem não transborde */
+    height: auto;
+    border-radius: 8px; /* Opcional: bordas arredondadas para a imagem */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Opcional: sombra para a imagem */
+}
+
+.about-text {
+    /* flex: 2; Permite que o texto ocupe mais espaço que a imagem */
+    max-width: 800px; /* Largura máxima para o bloco de texto */
+    line-height: 1.8; /* Melhora a legibilidade do texto */
+    color: #444; /* Cor mais escura para o texto para boa legibilidade */
+}
+
+.about-text p {
+    font-size: 1.25em; /* Ajuste o tamanho da fonte para o parágrafo */
+    font-weight: 400;
+}
+
+/* FIM DA SEÇÃO SOBRE */
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 60px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-align: center; /* Esta linha é crucial para centralizar o texto do título */
+}
+
+/* SEÇÃO DA GALERIA (Cards) - Adicionada com base nas discussões anteriores */
+/* Este é um exemplo, adicione o HTML correspondente se ainda não o fez */
+
+/* Container para os cards da galeria */
+
+/* Seção Gallery (Produtos) */
+
+.gallery .interface .section-title h2 {
+    margin-top: 100px;
+}
+
+.gallery-content {
+    display: flex; /* Transforma o container em um flexbox */
+    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha se não houver espaço */
+    justify-content: space-around; /* Centraliza os cards horizontalmente no container */
+    gap: 120px; /* Espaçamento entre os cards (tanto na horizontal quanto na vertical) */
+    margin-top: 40px; /* Adiciona um espaço abaixo do título "Nossos Produtos em Destaque" */
+    /* Você pode adicionar um max-width aqui se quiser limitar a largura total da linha de cards */
+    max-width: 1200px; /* Exemplo: limite a largura para que os cards não se espalhem demais */
+    margin: 0 auto;
+}
+
+/* ... (as regras para .card e seus elementos internos permanecem as mesmas) ... */
+
+
+.card {
+    background-color: #F0F8FF; /* Cor de fundo suave para o card */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+    max-width: 300px; /* Largura máxima para os cards */
+    width: 100%; /* Ocupa 100% da largura disponível na célula do grid */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 190px; /* Altura fixa para a imagem do card */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    padding: 0 15px; /* Adicionar padding para o título */
+}
+
+.card p {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding: 0 15px; /* Adicionar padding para o parágrafo */
+}
+
+.card .btn-view-more {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 2px solid #ff0000;
+    border-radius: 25px;
+    background-color: #ff0000;
     color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 0 15px; /* Centralizar o botão e dar espaçamento lateral */
 }
 
-.home .home-information span.title-home {
-    font-size: 5rem;
+.card .btn-view-more:hover {
+    background-color: transparent;
     color: #ff0000;
+    transform: translateY(-3px);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-.home p {
-    font-size: 1.75rem;
-    font-weight: 300;
-}
+/* Nova classe para imagens de card com tamanho reduzido */
 
+/* Animações (mantidas) */
 .hidden {
-    opacity: 0;  
+    opacity: 0;
     transform: scale(0);
 }
 
@@ -229,12 +660,252 @@ header {
     transition: 1.3s;
 }
 
-/* FIM DA SEÇÃO HOME */
+/* INICIO DO FOOTER */
+.footer {
+    margin-top: 70px;
+    background-color: #bcc1c5;
+    padding: 20px 4%;
+    color: #0d2645;
+    font-weight: 700;
+    text-align: center; /* Mantém o alinhamento central para o texto em geral */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
 
+.footer .interface {
+    display: flex;
+    flex-direction: column; /* Padrão: empilha logo e info */
+    align-items: center; /* Centraliza itens horizontalmente (logo e o bloco de info) */
+    justify-content: center; /* Centraliza itens verticalmente (se o height fosse definido) */
+    gap: 15px; /* Espaçamento entre o logo e o bloco de info */
+}
+
+.footer-logo img {
+    width: 7rem;
+    height: auto;
+    
+    margin-bottom: 0;
+}
+
+.footer-info p {
+    font-size: 0.85em;
+    line-height: 1.5;
+    margin: 5px 0;
+    text-align: center; /* Garante que o texto dentro de footer-info esteja centralizado */
+}
+
+/* Media Query para telas maiores (desktop): organiza logo e info lado a lado e CENTRALIZA TUDO */
+@media screen and (min-width: 769px) {
+    .footer .interface {
+        flex-direction: row; /* Em desktop, coloca logo e info lado a lado */
+        justify-content: center; /* *** MUDANÇA AQUI: Centraliza todo o grupo (logo + info) horizontalmente *** */
+        gap: 50px; /* Aumenta o espaçamento entre o logo e as informações no desktop */
+    }
+
+    /* REMOVER a regra 'text-align: right;' de .footer-info dentro desta media query, se ela existir */
+    /* .footer-info {
+        text-align: right; // REMOVA ESTA LINHA SE ESTIVER AQUI
+    } */
+}
+/* FIM DO FOOTER */
+
+/* Media Queries (mantidas e adicionadas para a seção sobre) */
 @media screen and (max-width: 1023px){
     /* CABEÇALHO - MENU */
     .menu-desktop,
     .btn-contato {
         display: none;
     }
+
+    /* Responsividade para a seção "Sobre" */
+    .about .interface {
+       gap: 20px; /* Menos espaço entre os itens empilhados */
+    }
+
+    .about-title {
+        font-size: 2.2rem;
+    }
+
+    .about-text {
+        max-width: 90%; /* Ajusta a largura do texto */
+    }
+
+    .about-text p {
+        font-size: 1.15em;
+    }
+
+    /* Seção Home */
+    .home-title {
+        font-size: 3.5em; /* Reduzir título em telas menores */
+    }
+    .home-text {
+        font-size: 1.2rem; /* Reduzir texto em telas menores */
+    }
 }
+
+@media screen and (max-width: 768px) {
+    .about {
+        padding: 50px 4%; /* Reduz o padding em telas menores */
+    }
+    .section-title{
+        font-size: 1.8rem;
+    }
+    .about-text p {
+        font-size: 1em;
+    }
+    .home-title {
+        font-size: 2.5em; /* Reduzir ainda mais em telas muito pequenas */
+    }
+    .home-text {
+        font-size: 1rem;
+    }
+    .btn-primary-home {
+        font-size: 1rem;
+        padding: 12px 30px;
+    }
+}
+
+/* Estilos do Modal (Pop-up de Detalhes do Produto) */
+.modal-overlay {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fixo na tela, cobrindo tudo */
+    z-index: 9999; /* Garante que fique acima de todos os outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semitransparente */
+    justify-content: center; /* Centraliza o conteúdo do modal horizontalmente */
+    align-items: center; /* Centraliza o conteúdo do modal verticalmente */
+    opacity: 0; /* Começa invisível para a transição */
+    visibility: hidden; /* Escondido para transição */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Transição suave */
+}
+
+.modal-overlay.active {
+    display: flex; /* Mostra o overlay quando a classe 'active' é adicionada */
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: #F0F8FF;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 550px; /* Largura máxima do conteúdo do modal */
+    width: 90%; /* Ocupa 90% da largura disponível em telas menores */
+    position: relative; /* Para posicionar o botão de fechar */
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4); /* Sombra mais pronunciada */
+    transform: translateY(-50px); /* Começa um pouco acima para animação de entrada */
+    opacity: 0; /* Começa invisível para animação de entrada */
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out; /* Animação suave */
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0); /* Desliza para a posição final */
+    opacity: 1;
+}
+
+/* Estilos para a imagem dentro do modal */
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    max-height: 40vh; /* *** ADICIONEI ESTA LINHA para limitar a altura da imagem (40% da altura da tela) *** */
+    object-fit: contain; /* *** ALTEREI PARA 'contain' para que a imagem inteira seja visível e não estique *** */
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+.modal-content h3 {
+    font-size: 2rem; /* Tamanho do título no modal */
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.modal-content p {
+    font-size: 1.15em; /* Tamanho do texto de descrição no modal */
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px; /* Espaço abaixo da descrição */
+}
+
+/* Botão de Fechar do Modal */
+.modal-content .close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2.5rem; /* Tamanho do 'X' */
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.modal-content .close-button:hover,
+.modal-content .close-button:focus {
+    color: #333;
+}
+
+/* Reutilizando o estilo do botão "Ver Mais" para o link dentro do modal */
+.modal-content .btn-view-more {
+    display: inline-block; /* Garante que o botão se comporte corretamente */
+    margin-top: 10px; /* Espaço acima do botão */
+    text-decoration: none; /* Remover sublinhado */
+}
+
+
+/* Estilos para a Seção de Parceiros */
+.partners {
+    padding: 80px 4%; /* Espaçamento interno */
+    background-color: #f8f8f8; /* Cor de fundo para destacar a seção */
+    text-align: center; /* Centraliza o título */
+    /* margin-top: 80px; */
+}
+
+/* Container dos logos dos parceiros */
+.partners-logos {
+    display: flex; /* Usa flexbox para alinhar os logos */
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente */
+    gap: 40px; /* Espaçamento entre os itens */
+    margin-top: 40px; /* Espaço abaixo do título */
+}
+
+
+/* Estilos para cada item de parceiro */
+/* Estilos para cada item de parceiro */
+.partner-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
+    /* *** ADICIONE OU AJUSTE ESTAS LINHAS PARA DIMENSÕES FIXAS *** */
+    width: 200px; /* Largura fixa (ajuste o valor se quiser mais) */
+    height: 180px; /* Altura fixa (ajuste o valor se quiser mais) */
+    flex-shrink: 0; /* Impede que o item seja reduzido */
+
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de hover nos parceiros */
+.partner-item:hover {
+    transform: translateY(-5px); /* Move o item levemente para cima */
+}
+
+/* Estilos para o logo do parceiro */
+.partner-item img {
+    max-height: 170px; /* Altura máxima do logo para padronizar */
+    max-width: 100%; /* Garante que a imagem não ultrapasse o container */
+    margin-bottom: 10px; /* Espaço entre o logo e o nome */
+    object-fit: contain; /* Ajusta a imagem sem distorcer */
+}
+
+.partners .section-title {
+    margin-top: -30px;
+}
+
+

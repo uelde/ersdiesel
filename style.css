@@ -693,6 +693,35 @@ header {
     text-align: center; /* Garante que o texto dentro de footer-info esteja centralizado */
 }
 
+@media screen and (max-width: 1023px){
+    /* === CORREÇÃO DA SEÇÃO PRODUTOS (GALERIA) === */
+    .gallery-content {
+        /* Garante que o container se comporte como flexível e permita a quebra */
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-evenly; /* Distribui os itens uniformemente */
+        gap: 20px;
+    }
+
+    .gallery-content .card {
+        /* A CHAVE: Garante que os cards ocupem metade da largura do container, forçando a duas colunas. */
+        width: 48%; 
+        /* Usamos !important para garantir que esta regra prevaleça sobre qualquer outra */
+        min-width: unset !important; 
+        max-width: unset !important;
+        margin: 10px 0;
+    }
+    
+    /* Para telas de celular muito estreitas, voltamos para uma coluna */
+    @media screen and (max-width: 600px) {
+        .gallery-content .card {
+            width: 90%; /* Uma coluna com margem nas laterais */
+            margin: 10px auto;
+        }
+    }
+    /* ... outros estilos ... */
+}
+
 /* Media Query para telas maiores (desktop): organiza logo e info lado a lado e CENTRALIZA TUDO */
 @media screen and (min-width: 769px) {
     .footer .interface {
@@ -711,6 +740,7 @@ header {
 /* Media Queries (mantidas e adicionadas para a seção sobre) */
 @media screen and (max-width: 1023px){
     /* CABEÇALHO - MENU */
+
     .menu-desktop,
     .btn-contato {
         display: none;
@@ -743,6 +773,8 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+
+
     .about {
         padding: 50px 4%; /* Reduz o padding em telas menores */
     }
@@ -763,6 +795,7 @@ header {
         padding: 12px 30px;
     }
 }
+
 
 /* Estilos do Modal (Pop-up de Detalhes do Produto) */
 .modal-overlay {
@@ -908,4 +941,116 @@ header {
     margin-top: -30px;
 }
 
+/* ============================================== */
+/* === AJUSTE DE RESPONSIVIDADE PARA TELAS ATÉ 600PX === */
+/* ============================================== */
 
+/* ============================================== */
+/* === AJUSTE DE RESPONSIVIDADE PARA TELAS ATÉ 600PX === */
+/* ============================================== */
+
+/* ============================================== */
+/* === CORREÇÃO AGRESSIVA PARA PRODUTOS (max-width: 600px) === */
+/* ============================================== */
+
+/* ============================================== */
+/* === CORREÇÃO AGRESSIVA PARA PRODUTOS (max-width: 600px) === */
+/* ============================================== */
+
+/* ============================================== */
+/* === CORREÇÃO AGRESSIVA PARA PRODUTOS (max-width: 600px) === */
+/* ============================================== */
+
+/* ============================================== */
+/* === CORREÇÃO AGRESSIVA PARA PRODUTOS (max-width: 600px) === */
+/* ============================================== */
+
+@media screen and (max-width: 600px) {
+    
+    /* 1. Garante que o container da galeria esteja pronto para a quebra */
+    .gallery-content {
+        display: flex !important; 
+        flex-wrap: wrap !important; 
+        justify-content: space-evenly !important; 
+        gap: 15px !important; 
+        padding: 20px 10px !important; 
+    }
+
+    /* 2. O Card será o container FLEX para empurrar o botão para baixo */
+  /* ============================================== */
+/* === CORREÇÃO AGRESSIVA PARA PRODUTOS (max-width: 600px) === */
+/* ============================================== */
+
+/* ============================================== */
+/* === NOVO LAYOUT DE PRODUTOS: GRID RESPONSIVO (max-width: 768px) === */
+/* ============================================== */
+
+@media screen and (max-width: 768px) {
+    
+    /* 1. Container da Galeria: Usa GRID para definir as colunas */
+    .gallery-content {
+        /* Desativa o Flexbox anterior e ativa o Grid */
+        display: grid !important; 
+        /* Define 2 colunas de tamanho igual (1fr) */
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 20px !important; /* Espaçamento entre os cards */
+        padding: 20px 15px !important; /* Ajusta o padding lateral */
+    }
+
+    /* 2. O Card agora é um item de Grid, e pode ter seu próprio layout Flex */
+    .gallery-content .card {
+        /* Limpa qualquer regra de altura/largura que atrapalhe o Grid */
+        width: 100% !important; 
+        height: auto !important; /* Remove altura fixa para que se ajuste ao conteúdo */
+        min-width: unset !important;
+        max-width: unset !important;
+        
+        /* Usa Flexbox interno para garantir que o botão esteja no final, se for necessário */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        
+        padding: 10px !important; 
+    }
+    
+    /* 3. Otimização de Conteúdo: Esconde o parágrafo */
+    .gallery-content .card p {
+        display: none !important; 
+    }
+
+    /* 4. Imagem: Foco total na visualização e simetria */
+    .gallery-content .card img {
+        width: 100% !important; /* Preenche a largura do card */
+        height: 120px !important; /* Define uma ALTURA FIXA para o container da imagem */
+        
+        /* CRÍTICO: Garante que todas as imagens preencham a área de 120px x 100%, cortando o excesso. */
+        object-fit: cover !important; 
+        object-position: center !important; 
+        
+        margin: 0 0 10px 0 !important;
+    }
+    
+    /* 5. Título e Botão: Diminui a fonte e muda o estilo do botão */
+    .gallery-content .card h3 {
+        font-size: 1rem !important; /* Título menor */
+        text-align: center !important; /* Centraliza o nome do produto */
+        margin-bottom: 10px !important;
+    }
+
+    .gallery-content .card .btn-main {
+        padding: 8px !important; /* Padding reduzido e uniforme */
+        font-size: 0.8rem !important; /* Fonte menor */
+        text-align: center !important;
+        margin-top: auto !important; /* Empurra o botão para o rodapé (graças ao Flexbox no card) */
+        width: 100% !important; /* Botão full-width */
+    }
+
+
+    /* === Regra para Celulares muito estreitos (Uma Coluna) === */
+    @media screen and (max-width: 480px) {
+        .gallery-content {
+            /* Volta para 1 coluna */
+            grid-template-columns: 1fr !important; 
+        }
+    }
+}

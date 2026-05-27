@@ -825,3 +825,427 @@ header {
         margin-top: 60px;
     }
 }
+
+/* =====================================================
+   MELHORIAS PREMIUM - ERS DIESEL
+   ===================================================== */
+:root {
+    --ers-blue: #0c243c;
+    --ers-blue-soft: #15395c;
+    --ers-red: #ff0000;
+    --ers-white: #ffffff;
+    --ers-muted: #d7e2ee;
+    --ers-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #f8f8f8;
+}
+
+#site-header {
+    position: fixed;
+    background: rgba(12, 36, 60, 0.08);
+    backdrop-filter: blur(0px);
+    transition: background-color .35s ease, box-shadow .35s ease, backdrop-filter .35s ease, padding .35s ease;
+}
+
+#site-header.header-scrolled {
+    background: rgba(12, 36, 60, 0.92);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.28);
+}
+
+#site-header.header-scrolled .header-container {
+    padding: 12px 0;
+}
+
+.desktop-menu ul li a {
+    position: relative;
+}
+
+.desktop-menu ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: var(--ers-red);
+    transition: width .3s ease;
+}
+
+.desktop-menu ul li a:hover::after {
+    width: 100%;
+}
+
+.home {
+    isolation: isolate;
+}
+
+.home::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 18% 55%, rgba(255, 0, 0, .22), transparent 28%),
+                linear-gradient(90deg, rgba(12, 36, 60, .72), rgba(0, 0, 0, .24));
+    z-index: 6;
+    pointer-events: none;
+}
+
+.home .interface {
+    width: 100%;
+}
+
+.home-text {
+    max-width: 650px;
+    margin-top: 10em;
+    position: relative;
+    z-index: 8;
+}
+
+.home-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-size: .85rem;
+    padding: 8px 14px;
+    border: 1px solid rgba(255,255,255,.28);
+    border-radius: 999px;
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(10px);
+    margin-bottom: 18px;
+}
+
+.home-title {
+    font-size: clamp(2.6rem, 5vw, 5rem);
+    line-height: 1.02;
+    margin-bottom: 20px;
+}
+
+.home-subtitle {
+    color: #eef4fb;
+    max-width: 600px;
+    font-size: 1.08rem;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.home-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn-outline {
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.45);
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: rgba(255,255,255,.08);
+    transition: transform .3s ease, border-color .3s ease, background .3s ease;
+}
+
+.btn-outline:hover {
+    transform: translateY(-3px);
+    border-color: #fff;
+    background: rgba(255,255,255,.16);
+}
+
+.btn-main {
+    box-shadow: 0 12px 24px rgba(255, 0, 0, .24);
+}
+
+.btn-main:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 18px 36px rgba(255, 0, 0, .32);
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(4px);
+    transition: opacity .75s ease, transform .75s ease, filter .75s ease;
+}
+
+.hidden.show {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+.partners {
+    overflow: hidden;
+}
+
+.partner-item {
+    background: rgba(255,255,255,.6);
+    border: 1px solid rgba(12,36,60,.08);
+    border-radius: 16px;
+    padding: 18px;
+    min-height: 100px;
+    justify-content: center;
+}
+
+.partner-item img {
+    filter: grayscale(1);
+}
+
+.partner-item:hover img {
+    filter: grayscale(0);
+}
+
+.about-content-card,
+.carousel-container,
+.contact-info,
+.benefit-card,
+.fact-item {
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+
+.about-content-card:hover,
+.contact-info:hover,
+.benefit-card:hover,
+.fact-item:hover {
+    transform: translateY(-6px);
+}
+
+.gallery {
+    margin-top: 0;
+    background: radial-gradient(circle at top left, rgba(255,0,0,.16), transparent 32%), var(--ers-blue);
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.22);
+    background: linear-gradient(135deg, rgba(255,255,255,.98), rgba(242,247,252,.96));
+    box-shadow: var(--ers-shadow);
+}
+
+.carousel-description-item {
+    transform: translate(-18px, -50%);
+}
+
+.carousel-description-item.active {
+    transform: translate(0, -50%);
+}
+
+.carousel-description-item h3 {
+    color: var(--ers-blue);
+    font-size: clamp(1.65rem, 2.5vw, 2.35rem);
+    line-height: 1.15;
+}
+
+.carousel-description-item ul {
+    margin-bottom: 32px;
+}
+
+.carousel-image-area {
+    background: radial-gradient(circle, #fff, #edf3f8);
+    border: 1px solid rgba(12,36,60,.08);
+    box-shadow: inset 0 0 40px rgba(12,36,60,.06), 0 20px 45px rgba(0,0,0,.14);
+}
+
+.carousel-images-track img {
+    padding: 28px;
+    transform: scale(.96);
+    opacity: .76;
+    transition: opacity .55s ease, transform .55s ease;
+}
+
+.carousel-images-track img.is-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.carousel-navigation .nav-button {
+    background: rgba(12, 36, 60, .64);
+    border: 1px solid rgba(255,255,255,.45);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 12px 28px rgba(0,0,0,.22);
+}
+
+.carousel-navigation .nav-button:hover {
+    background: var(--ers-red);
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 12;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    border: 0;
+    background: rgba(12, 36, 60, .28);
+    cursor: pointer;
+    transition: width .25s ease, background .25s ease, transform .25s ease;
+}
+
+.carousel-dot.active {
+    width: 32px;
+    background: var(--ers-red);
+}
+
+.benefits {
+    padding: 90px 4%;
+    background: #f4f7fb;
+}
+
+.benefits .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--ers-blue);
+    margin-bottom: 44px;
+}
+
+.benefits .section-title span {
+    color: var(--ers-red);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.benefit-card {
+    background: #fff;
+    border: 1px solid rgba(12,36,60,.08);
+    border-radius: 18px;
+    padding: 34px 28px;
+    box-shadow: 0 14px 40px rgba(12,36,60,.08);
+}
+
+.benefit-card i {
+    display: inline-flex;
+    width: 56px;
+    height: 56px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(255,0,0,.1);
+    color: var(--ers-red);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+    color: var(--ers-blue);
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.benefit-card p {
+    color: #46586a;
+    line-height: 1.7;
+}
+
+.fact-item {
+    background: #fff;
+    border: 1px solid rgba(12,36,60,.08);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 14px 40px rgba(12,36,60,.08);
+}
+
+.contact-whatsapp {
+    margin-top: 12px;
+}
+
+@media screen and (max-width: 992px) {
+    .home-text {
+        max-width: 90%;
+        margin-top: 8em;
+    }
+
+    .carousel-description-item,
+    .carousel-description-item.active {
+        transform: none;
+    }
+
+    .carousel-dots {
+        position: relative;
+        bottom: auto;
+        margin-top: 18px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-logo img {
+        width: 6.8rem;
+    }
+
+    .home {
+        min-height: 760px;
+        height: auto;
+        padding: 120px 0 70px;
+    }
+
+    .home-title {
+        font-size: 2.7rem;
+    }
+
+    .home-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .home-actions .btn-main,
+    .home-actions .btn-outline {
+        text-align: center;
+        width: 100%;
+    }
+
+    .carousel-container {
+        padding: 22px;
+    }
+
+    .carousel-description-item ul {
+        margin-bottom: 24px;
+    }
+
+    .btn-main {
+        margin-top: 0;
+    }
+
+    .carousel-image-area {
+        max-height: none;
+    }
+
+    .footer .interface {
+        justify-content: center;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+}

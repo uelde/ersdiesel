@@ -1,23 +1,22 @@
-let btnMenu = document.getElementById('btn-menu');
-let menu = document.getElementById('menu-mobile');
-let overlay = document.getElementById('overlay-menu');
-let btnClose = menu.querySelector('.btn-close-menu'); // Seleciona o botão 'X' dentro do menu
+const btnMenu = document.getElementById('btn-menu');
+const menu = document.getElementById('menu-mobile');
+const overlay = document.getElementById('overlay-menu');
+const btnClose = menu?.querySelector('.btn-close-menu');
 
 function closeMenu() {
-    menu.classList.remove('open-menu');
-    overlay.style.display = 'none';
+    menu?.classList.remove('open-menu');
+    if (overlay) overlay.style.display = 'none';
 }
 
-// 1. ABRIR MENU (clicando no ícone de lista)
-btnMenu.addEventListener('click', ()=>{
-  menu.classList.add('open-menu');
-  overlay.style.display = 'block'; 
+function openMenu() {
+    menu?.classList.add('open-menu');
+    if (overlay) overlay.style.display = 'block';
+}
+
+btnMenu?.addEventListener('click', openMenu);
+btnClose?.addEventListener('click', closeMenu);
+overlay?.addEventListener('click', closeMenu);
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMenu();
 });
-
-// 2. FECHAR MENU (clicando no botão 'X' dentro do menu)
-btnClose.addEventListener('click', closeMenu);
-
-// 3. FECHAR MENU (clicando no overlay/fora da nav)
-overlay.addEventListener('click', closeMenu);
-
-// NOTA: A lógica para fechar ao clicar nos links internos já está correta no script.js.

@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href=" https://fonts.cdnfonts.com/css/abolition-test " rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/abolition-test" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>ERS Diesel</title>
+    <meta name="description" content="ERS Diesel: equipamentos, módulos eletrônicos e soluções para testes de sistemas de injeção diesel, bancadas e unidades eletrônicas.">
+    <title>ERS Diesel | Tecnologia para Laboratórios Diesel</title>
 </head>
 
 <body>
 
-    <header>
+    <header id="site-header">
         <div class="interface">
             <div class="header-container">
                 <div class="header-logo">
-                    <a href="#">
+                    <a href="#home" aria-label="Voltar ao início">
                         <img src="image/Logo/ERS DIESEL.png.png" alt="Logo ERS Diesel">
                     </a>
                 </div>
@@ -49,7 +50,7 @@
             <nav>
                 <ul>
                     <li><a href="#home">Início</a></li>
-                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#gallery">Produtos</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
@@ -62,7 +63,13 @@
             <div class="interface">
                 <div class="flex hidden">
                     <div class="home-text">
+                        <p class="home-eyebrow">Equipamentos • Bancadas • Unidades eletrônicas diesel</p>
                         <h1 class="home-title">A <span>Tecnologia </span>que move o seu <span>Laboratório</span></h1>
+                        <p class="home-subtitle">Soluções para testes, manutenção, aferição e atualização de sistemas de injeção diesel com performance, precisão e suporte técnico.</p>
+                        <div class="home-actions">
+                            <a href="#gallery" class="btn-main">Ver Produtos</a>
+                            <a href="https://wa.me/5511957490408?text=Olá!%20Vim%20pelo%20site%20da%20ERS%20Diesel%20e%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="btn-outline">Solicitar Orçamento</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -186,8 +193,8 @@
                         <div class="carousel-description-item active" data-product="ers-286">
                             <h3>ERS-286C Cambox HEUI CAT Tester</h3>
                             <p>Módulo eletrônico para testar unidades dos sistemas <strong>BOSCH, DELPHI, CUMMINS, DETROIT e CAT</strong> 
-                                dos <strong>UIS, UPS, HEUIS e CAT</strong> aplicado dos veículos: <strong>VOLVO, MERCEDES, IVECO, DEPROT 
-                                    INTERNACIONAL E CATERPILLAR
+                                dos <strong>UIS, UPS, HEUIS e CAT</strong> aplicado dos veículos: <strong>VOLVO, MERCEDES, IVECO, DETROIT 
+                                    INTERNATIONAL E CATERPILLAR
                                 </strong>.
                             </p>
                             <ul>
@@ -197,11 +204,28 @@
                                 <li><i class="bi bi-check-circle-fill"></i> <strong>Sistema de Calibração e Codificação de
                                     Injetores.</strong></li>
                             </ul>
-                            <a href="#contact" class="btn-main"><strong>Quero o ERS-286</strong></a>
+                            <a href="#contact" class="btn-main"><strong>Quero o ERS-286C</strong></a>
                         </div>
 
-                        <div class="carousel-description-item" data-product="ers-190">
-                            <h3>ERS-190 Pulse Tester Injetctor UI/UP</h3>
+                        <div class="carousel-description-item" data-product="ers-208">
+                            <h3>ERS-208 Teste de Bombas Common Rail Sincronizadas</h3>
+                            <p>Módulo eletrônico para testar unidades dos sistemas <strong>BOSCH, DELPHI, CUMMINS, DETROIT e CAT</strong> 
+                                dos <strong>UIS, UPS, HEUIS e CAT</strong> aplicado dos veículos: <strong>VOLVO, MERCEDES, IVECO, DETROIT 
+                                    INTERNATIONAL E CATERPILLAR
+                                </strong>.
+                            </p>
+                            <ul>
+                                <li><i class="bi bi-check-circle-fill"></i> <strong>Teste de Injetores Common Rail (Bosch,
+                                    Delphi, Denso).</strong></li>
+                                <li><i class="bi bi-check-circle-fill"></i> <strong>Teste de Injetores Piezoelétricos.</strong></li>
+                                <li><i class="bi bi-check-circle-fill"></i> <strong>Sistema de Calibração e Codificação de
+                                    Injetores.</strong></li>
+                            </ul>
+                            <a href="#contact" class="btn-main"><strong>Quero o ERS-208</strong></a>
+                        </div>
+
+                        <div class="carousel-description-item" data-product="ers-244">
+                            <h3>ERS-244 Common Rail Tester</h3>
                             <p>A solução compacta e portátil para testes rápidos e precisos. Ideal para oficinas com
                                 espaço reduzido que não abrem mão da qualidade e tecnologia ERS Diesel.</p>
                             <ul>
@@ -210,11 +234,67 @@
                                 <li><i class="bi bi-check-circle-fill"></i> <strong>Simulação de Condições Reais de Motor.</strong></li>
                                 <li><i class="bi bi-check-circle-fill"></i> <strong>Leve, Portátil e de Fácil Manuseio.</strong></li>
                             </ul>
-                            <a href="#contact" class="btn-main"><strong>Saiba Mais sobre o ERS-190</strong></a>
+                            <a href="#contact" class="btn-main"><strong>Quero o ERS-244</strong></a>
                         </div>
 
-                        <div class="carousel-description-item" data-product="ers-110">
-                            <h3>ERS-78 Megomêtro Digital</h3>
+                        <div class="carousel-description-item" data-product="ers-280">
+                            <h3>ERS-280 Módulo Eletrônico para Bombas de Alta Pressão.</h3>
+                            <p>A solução compacta e portátil para testes rápidos e precisos. Ideal para oficinas com
+                                espaço reduzido que não abrem mão da qualidade e tecnologia ERS Diesel.</p>
+                            <ul>
+                                <li><i class="bi bi-check-circle-fill"></i> <strong>Teste de Pulso de Injetores (Indutivos e
+                                    Piezo).</strong></li>
+                                <li><i class="bi bi-check-circle-fill"></i> <strong>Simulação de Condições Reais de Motor.</strong></li>
+                                <li><i class="bi bi-check-circle-fill"></i> <strong>Leve, Portátil e de Fácil Manuseio.</strong></li>
+                            </ul>
+                            <a href="#contact" class="btn-main"><strong>Quero o ERS-280</strong></a>
+                        </div>
+
+                         <div class="carousel-description-item" data-product="ers-176">
+                            <h3>ERS-176 Teste de Bombas Stanadyne</h3>
+                            <p>Módulo eletrônico para testar unidades dos sistemas <strong>BOSCH, DELPHI, CUMMINS, DETROIT e CAT</strong> 
+                                dos <strong>UIS, UPS, HEUIS e CAT</strong> aplicado dos veículos: <strong>VOLVO, MERCEDES, IVECO, DETROIT 
+                                    INTERNATIONAL E CATERPILLAR
+                                </strong>.
+                            </p>
+                            <ul>
+                                <li><i class="bi bi-check-circle-fill"></i> <strong>Teste de Injetores Common Rail (Bosch,
+                                    Delphi, Denso).</strong></li>
+                                <li><i class="bi bi-check-circle-fill"></i> <strong>Teste de Injetores Piezoelétricos.</strong></li>
+                                <li><i class="bi bi-check-circle-fill"></i> <strong>Sistema de Calibração e Codificação de
+                                    Injetores.</strong></li>
+                            </ul>
+                            <a href="#contact" class="btn-main"><strong>Quero o ERS-176</strong></a>
+                        </div>
+
+                        <div class="carousel-description-item" data-product="ers-190">
+                            <h3>ERS-190 Pulse Tester Injector UI/UP</h3>
+                            <p>A solução compacta e portátil para testes rápidos e precisos. Ideal para oficinas com
+                                espaço reduzido que não abrem mão da qualidade e tecnologia ERS Diesel.</p>
+                            <ul>
+                                <li><i class="bi bi-check-circle-fill"></i> <strong>Teste de Pulso de Injetores (Indutivos e
+                                    Piezo).</strong></li>
+                                <li><i class="bi bi-check-circle-fill"></i> <strong>Simulação de Condições Reais de Motor.</strong></li>
+                                <li><i class="bi bi-check-circle-fill"></i> <strong>Leve, Portátil e de Fácil Manuseio.</strong></li>
+                            </ul>
+                            <a href="#contact" class="btn-main"><strong>Quero o ERS-190</strong></a>
+                        </div>
+
+                        <div class="carousel-description-item" data-product="ers-238">
+                            <h3>ERS-238 Unidade Pump Test</h3>
+                            <p>A solução compacta e portátil para testes rápidos e precisos. Ideal para oficinas com
+                                espaço reduzido que não abrem mão da qualidade e tecnologia ERS Diesel.</p>
+                            <ul>
+                                <li><i class="bi bi-check-circle-fill"></i> <strong>Teste de Pulso de Injetores (Indutivos e
+                                    Piezo).</strong></li>
+                                <li><i class="bi bi-check-circle-fill"></i> <strong>Simulação de Condições Reais de Motor.</strong></li>
+                                <li><i class="bi bi-check-circle-fill"></i> <strong>Leve, Portátil e de Fácil Manuseio.</strong></li>
+                            </ul>
+                            <a href="#contact" class="btn-main"><strong>Quero o ERS-238</strong></a>
+                        </div>
+
+                        <div class="carousel-description-item" data-product="ers-78">
+                            <h3>ERS-78 Megômetro Digital</h3>
                             <p>Equipamento de bancada para medir resistência de isolamento dos injetores.
                             </p>
                             <ul>
@@ -223,7 +303,7 @@
                                 <li><i class="bi bi-check-circle-fill"></i> <strong>Injetores Indutivos.</strong></li>
                                 <li><i class="bi bi-check-circle-fill"></i> <strong>Confiabilidade.</strong></li>
                             </ul>
-                            <a href="#contact" class="btn-main"><strong>Comprar ERS-110</strong></a>
+                            <a href="#contact" class="btn-main"><strong>Quero o ERS-78</strong></a>
                         </div>
 
                         <div class="carousel-description-item" data-product="ers-piezo2">
@@ -235,7 +315,7 @@
                                 <li><i class="bi bi-check-circle-fill"></i> <strong>Alta Frequência e Precisão de Pulso.</strong></li>
                                 <li><i class="bi bi-check-circle-fill"></i> <strong>Rápida Análise e Diagnóstico.</strong></li>
                             </ul>
-                            <a href="#contact" class="btn-main"><strong>Detalhes do Piezo Test</strong></a>
+                            <a href="#contact" class="btn-main"><strong>Quero o Piezo Test</strong></a>
                         </div>
                         <div class="carousel-description-item" data-product="ers-182">
                             <h3>ERS-182 Unidade Automática Tester</h3>
@@ -262,25 +342,32 @@
                                 <li><i class="bi bi-check-circle-fill"></i> <strong>Testes em Indutivos.</strong></li>
                                 <li><i class="bi bi-check-circle-fill"></i> <strong>Pode ser usado em conjunto com teste de bico mecânico.</strong></li>
                             </ul>
-                            <a href="#contact" class="btn-main"><strong>Quero o ERS-182</strong></a>
+                            <a href="#contact" class="btn-main"><strong>Quero o ERS-210</strong></a>
                         </div>
 
                     </div>
 
                     <div class="carousel-image-area">
                         <div class="carousel-images-track">
-                            <img src="image/ers-182.png" alt="ERS-182 Unidade Automática Tester" data-product="ers-182">
-                            <img src="image/ERS-286.png" alt="ERS-286 Teste de Injetores" data-product="ers-286">
-                            <img src="image/ers190.png" alt="ERS-190 Mini Teste CR" data-product="ers-190">
-                            <img src="image/megometro.png" alt="ERS-110 Megamômetro Digital" data-product="ers-110">
-                            <img src="image/piezo novo.png" alt="NEW PIEZO TEST ERS 2" data-product="ers-piezo2">
-                            <img src="image/ERS-210.png" alt="ERS-182 Unidade Automática Tester" data-product="ers-210">
+                            <img src="image/ers-182.png" alt="ERS-182 Unidade Automática Tester" data-product="ers-182" loading="eager">
+                            <img src="image/ERS-286.png" loading="lazy" alt="ERS-286 Teste de Injetores" data-product="ers-286">
+                            <img src="image/ERS 208.png" loading="lazy" alt="ERS-286 Teste de Injetores" data-product="ers-208">
+                            <img src="image/ers 244.png" loading="lazy" alt="ERS-182 Unidade Automática Tester" data-product="ers-244">
+                            <img src="image/ers 280.png" loading="lazy" alt="ERS-182 Unidade Automática Tester" data-product="ers-280">
+                            <img src="image/Stanadyne.png" loading="lazy" alt="ERS-286 Teste de Injetores" data-product="ers-176">
+                            <img src="image/ERS190.png" loading="lazy" alt="ERS-190 Mini Teste CR" data-product="ers-190">
+                            <img src="image/megometro-modal.png" loading="lazy" alt="ERS-78 Megamômetro Digital" data-product="ers-78">
+                            <img src="image/piezo novo.png" loading="lazy" alt="NEW PIEZO TEST ERS 2" data-product="ers-piezo2">
+                            <img src="image/ERS-210.png" loading="lazy" alt="ERS-182 Unidade Automática Tester" data-product="ers-210">
+                            <img src="image/Ers 238.png" loading="lazy" alt="ERS-182 Unidade Automática Tester" data-product="ers-238">
+                            
                         </div>
 
                         <div class="carousel-navigation">
-                            <button class="nav-button prev"><i class="bi bi-chevron-left"></i></button>
-                            <button class="nav-button next"><i class="bi bi-chevron-right"></i></button>
+                            <button class="nav-button prev" aria-label="Produto anterior"><i class="bi bi-chevron-left"></i></button>
+                            <button class="nav-button next" aria-label="Próximo produto"><i class="bi bi-chevron-right"></i></button>
                         </div>
+                        <div class="carousel-dots" aria-label="Navegação do carrossel"></div>
                     </div>
 
                 </div>
@@ -288,6 +375,30 @@
 
         </section>
         <!-- Nova seção de Fatos Rápidos -->
+
+        <section class="benefits" id="benefits">
+            <div class="interface">
+                <h2 class="section-title hidden">POR QUE ESCOLHER A <span>ERS DIESEL?</span></h2>
+                <div class="benefits-grid">
+                    <article class="benefit-card hidden">
+                        <i class="bi bi-tools"></i>
+                        <h3>Tecnologia própria</h3>
+                        <p>Equipamentos desenvolvidos para laboratórios diesel que precisam de precisão, robustez e produtividade.</p>
+                    </article>
+                    <article class="benefit-card hidden">
+                        <i class="bi bi-headset"></i>
+                        <h3>Suporte técnico</h3>
+                        <p>Atendimento próximo para orientar instalação, uso, manutenção e atualização dos equipamentos.</p>
+                    </article>
+                    <article class="benefit-card hidden">
+                        <i class="bi bi-truck"></i>
+                        <h3>Envio para todo Brasil</h3>
+                        <p>Soluções para oficinas e laboratórios diesel em diferentes regiões, com foco em confiança e agilidade.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section class="facts" id="fatos">
             <div class="interface">
                 <div class="facts-content">
@@ -324,9 +435,10 @@
                     <!-- Card maior e centralizado -->
                     <div class="contact-info">
                         <h3>Informações de Contato</h3>
-                        <p><i class="bi bi-geo-alt-fill"></i> Endereço: Rua Sebastião Zacarias, 200 - Jundiai</p>
-                        <p><i class="bi bi-envelope-fill"></i> Email: edvaldo.injecaodiesel@gmail.com.br</p>
-                        <p><i class="bi bi-telephone-fill"></i> Telefone: (11) 95749-0408</p>
+                        <p><i class="bi bi-geo-alt-fill"></i> Endereço: Rua Sebastião Zacarias, 200 - Jundiaí</p>
+                        <p><i class="bi bi-envelope-fill"></i> Email: edvaldo.injecaodiesel@gmail.com</p>
+                        <p><i class="bi bi-telephone-fill"></i> Telefone/WhatsApp: (11) 95749-0408</p>
+                        <a href="https://wa.me/5511957490408?text=Olá!%20Vim%20pelo%20site%20da%20ERS%20Diesel%20e%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="btn-main contact-whatsapp"><i class="bi bi-whatsapp"></i> Chamar no WhatsApp</a>
                     </div>
 
                 </div>
